@@ -1,0 +1,33 @@
+# Ex - 1
+v = c(1,2,3,3,4,NA,3,2,4,5,NA,5)
+print("Original vector")
+print(v)
+print("Levels of factor of the said vector: ")
+print(levels(factor(v)))
+print(factor(v))
+
+#Ex - 2
+data = c("East", "West", "East", "North", "North", "East", "West", "West", "West", "East", "North")
+print(data)
+print(is.factor(data))
+
+f_data = factor(data)
+print(is.factor(f_data))
+
+#program to change the first level of a factor with another level of given factor
+v = c("a", "b", "a", "c", "b")
+print("Original vector:")
+print(v)
+f = factor(v)
+print("Factor of the said vector:")
+print(f)
+levels(f)[1] = levels(f)[3]
+print(f)
+
+#program to concatenate two given factors in a single factor
+v = c("a", "b", "a", "c", "b")
+data = c("East", "West", "East", "North", "North", "East", "West", "West", "West", "East", "North")
+f1 = factor(v)
+f2 = factor(data)
+f3 = factor(c(f1, f2))
+print(levels(f3))
